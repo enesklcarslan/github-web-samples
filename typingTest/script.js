@@ -1,24 +1,24 @@
 function getWord(){
     let wordsArray = []
     var $sampleTextRow = $('#sample-text-row');
-    for (var i = 0; i < 7; i++) {
-
-        $.ajax({
-            url: 'https://random-words-api.vercel.app/word',
-            type: 'GET',
-            async: false,
-            beforeSend: function() {
-                //console.log("Getting words ");
-            },
-            success: function(result) {
-                //console.log("Getting words successful ");
-                $('#sample-'+(i+1)).html(result[0]['word'].toLowerCase());
-                wordsArray.push(result[0]['word'].toLowerCase());
-            },
-            complete: function() {
+    $.ajax({
+        url: 'https://random-word-api.herokuapp.com/word?number=8',
+        type: 'GET',
+        async: false,
+        beforeSend: function() {
+            //console.log("Getting words ");
+        },
+        success: function(result) {
+            //console.log("Getting words successful ");
+            for(let i=0; i<8;i++)
+            {
+                $('#sample-'+(i+1)).html(result[i]);
+                wordsArray.push(result[i]);
             }
-        });
-    }
+        },
+        complete: function() {
+        }
+    });
     return wordsArray;
 }
 var wordsArray = getWord();//hem 7 kelime gösteriyor hem de 7 kelimenin arrayini döndürüyor
@@ -51,14 +51,14 @@ function submitWord(){
     if(input == currentGoalWord + " ")
     {
         wordsArray.shift();
-        $('#sample-'+((wordsTyped%7)+1)).addClass('done');
+        $('#sample-'+((wordsTyped%8)+1)).addClass('done');
         wordsTyped += 1;
         $('#score').html(wordsTyped);
         $('#user-input').val("");
         if(wordsArray.length == 0)
         {
             wordsArray = getWord();
-            for (var i = 0; i < 7; i++) {
+            for (var i = 0; i < 8; i++) {
                 $('#sample-'+(i+1)).removeClass('done');
             }
         }
