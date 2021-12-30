@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Typing Test</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        body{
+            background: grey;
+        }
+        .col{
+        }
+        .container{
+            margin-bottom:50px;
+        }
+        #sample-text-container{
+            margin-top: 100px;
+            background: #6a6a6a;
+            text-align: center;
+        }
+        #user-input-field{
+            background: #6a6a6a;
+            text-align: center;
+            height:100px;
+        }
+        #sample-text-container .col{
+            text-align: center;
+        }
+        #user-input{
+            width: 100%;
+        }
+        input{
+            margin-top: 35px;
+        }
+        .is-valid{
+            border: 3px solid #2ce52c;
+        }
+        .is-invalid{
+            border: 3px solid #ff3030;
+        }
+        .done{
+            background: #2ce52c;
+        }
+        #timeRemaining{
+            margin-top: 35px;
+            border: 3px dashed white;
+            background: #979797;
+        }
+    </style>
+</head>
+<body>
+<div class="container" style="text-align: center; font-size:20px" id="score-container">
+    Score: <span id="score">0</span> words
+</div>
+<div class="container" id="sample-text-container">
+    <div class="row" id="sample-text-row">
+        <div class="col" class="sample-text" id="sample-1">
+            Words
+        </div>
+        <div class="col" class="sample-text" id="sample-2">
+            are
+        </div>
+        <div class="col" class="sample-text" id="sample-3">
+            loading...
+        </div>
+        <div class="col" class="sample-text" id="sample-4">
+
+        </div>
+        <div class="col" class="sample-text" id="sample-5">
+
+        </div>
+        <div class="col" class="sample-text" id="sample-6">
+
+        </div>
+        <div class="col" class="sample-text" id="sample-7">
+
+        </div>
+    </div>
+</div>
+
+<div class="container" id="user-input-field">
+
+    <div class="row">
+
+        <div class="col-9">
+            <input type="text" id="user-input">
+        </div>
+        <div class="col-2">
+            <input type="button" style="display:none; width:100%;" id="restart-button" value="Restart">
+        </div>
+        <div class="col-1" id="timeRemaining">
+
+        </div>
+
+    </div>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
