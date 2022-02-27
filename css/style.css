@@ -1,0 +1,76 @@
+body {
+    background-color: #f1f1f1;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+main {
+    padding: 20px;
+    text-align: justify;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+p {
+    text-align: justify;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h2 {
+    font-size: 15px !important;
+    margin-top: 3px !important;
+}
+
+footer {
+    padding: 10px;
+    text-align: center !important;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#go-to-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#go-to-button:hover {
+    background-color: #3e8e41;
+}
+
+li {
+    /*make list items look very fancy*/
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #337ab7;
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #f1f1f1;
+    border-radius: 5px;
+}
+
+li>a:hover {
+    background-color: #f1f1f1;
+    text-decoration: none;
+}
