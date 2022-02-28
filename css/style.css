@@ -74,3 +74,30 @@ li>a:hover {
     background-color: #f1f1f1;
     text-decoration: none;
 }
+
+@media screen and (max-height: 745px) {
+    * {
+        font-size: 1em !important;
+    }
+    li {
+        padding: 0.5em;
+    }
+}
+
+@media screen and (max-height: 650px) {
+    * {
+        font-size: 0.95em !important;
+    }
+    li {
+        padding: 0.4em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    * {
+        font-size: 0.95em !important;
+    }
+    li {
+        padding: 0.5em;
+    }
+}
